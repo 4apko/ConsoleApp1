@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Program
+    static class TaskUtills
     {
-        static void Main(string[] args)
-        {
-            //Task1.Run();
-            //Task2.Run();
-            Task3.Run();
-        }
+        public static bool IsCorrectNum(string s) => Int32.TryParse(s, out int a) && a > 0;
+
     }
 }
