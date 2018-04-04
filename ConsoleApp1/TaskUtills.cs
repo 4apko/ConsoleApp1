@@ -10,5 +10,6 @@ namespace ConsoleApp1
     {
         public static bool IsCorrectNum(string s) => Int32.TryParse(s, out int a) && a > 0;
 
+        public static bool LessThanFour(string s) => IsCorrectNum(s) && Int32.Parse(s) < 4;
     }
 }
