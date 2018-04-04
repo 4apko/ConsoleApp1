@@ -14,7 +14,29 @@ namespace ConsoleApp1
             var entered = Console.ReadLine();
             if (TaskUtills.IsCorrectNum(entered))
             {
-               
+                int num = Int32.Parse(entered);
+
+                for (int i = 1; i <= num; i++)
+                {
+                    for (int spaces = num-i; spaces > 0; spaces--)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int stars = 1; stars < i; stars++)
+                    {
+                        Console.Write("*");
+                    }
+                    for (int stars = i; stars > 0; stars--)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Not corrected number!");
             }
         }
     }
